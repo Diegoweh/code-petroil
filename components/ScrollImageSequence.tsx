@@ -27,7 +27,7 @@ export default function ScrollImageSequence() {
     const updateImage = () => {
       if (imgRef.current) {
         const frameNum = Math.floor(imageSequence.frame);
-        imgRef.current.src = `/scrollimg/code_${getFrameNumber(frameNum)}.png`;
+        imgRef.current.src = `/scrollimg/code_${getFrameNumber(frameNum)}_compressed.webp`;
       }
     };
 
@@ -55,7 +55,7 @@ export default function ScrollImageSequence() {
       <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center">
         <img
           ref={imgRef}
-          src={`/scrollimg/code_000.png`}
+          src={`/scrollimg/code_000_compressed.webp`}
           alt="Scroll sequence"
           className="w-full h-full object-contain"
         />
